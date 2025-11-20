@@ -1,27 +1,64 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jornadas de Cocina Tradicional</title>
+    <script type="module" src="assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="brand">Jornadas Tradicionales</a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          onclick="toggleNav(this)"
+        >
+          ☰
+        </button>
+        <nav id="site-nav" class="site-nav">
+          <a href="views/participantes.html" class="nav-link">Participantes</a>
+          <a href="views/articulo.html" class="nav-link">Artículo</a>
+          <a href="views/libre.html" class="nav-link">Extra</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__inner">
+          <p class="hero__kicker">27–30 noviembre · Centro Cívico</p>
+          <h1 class="hero__title">Jornadas de Cocina Tradicional</h1>
+          <p class="hero__subtitle">Charlas · Talleres · Cursos</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#">Ver programa</a>
+            <a class="btn btn--ghost" href="#">Inscripción</a>
+          </div>
+        </div>
+        <div class="hero__bg" aria-hidden="true"></div>
+      </section>
+
+      <section class="feature">
+        <div class="container feature__grid">
+          <figure class="feature__media">
+            <img src="./assets/images/plato.webp" alt="Plato tradicional" />
+          </figure>
+          <div class="feature__content">
+            <h2>Sabores de siempre</h2>
+            <p>
+              Recetas que vuelven: cocina de cuchara, horno de leña y producto
+              local. Un homenaje a la tradición con mirada actual.
+            </p>
+            <a class="btn btn--primary" href="views/articulo.html"
+              >Leer artículo</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="views/footer.html"></include>
   </body>
 </html>

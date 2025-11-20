@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Participantes — Jornadas Tradicionales</title>
+    <base href="/" />
+    <link rel="stylesheet" href="../assets/styles/main.scss" />
+    <script type="module" src="../assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <include src="views/header.html"></include>
+    <!-- ===== Main content ===== -->
+    <main>
+      <section class="speakers">
+        <div class="container">
+          <header class="speakers__header">
+            <h1>Participantes</h1>
+            <p>Chefs, divulgadores y amantes de la cocina tradicional.</p>
+          </header>
+
+          <!-- FLEX grid of speaker cards -->
+          <ul class="speakers__grid" role="list">
+            <!-- Speaker 1 -->
+            <li class="speaker" data-initials="AG">
+              <img class="speaker__avatar" aria-hidden="true" src="../assets/images/ana-garcia.png"></img>
+              <div class="speaker__body">
+                <h2 class="speaker__name">Ana García</h2>
+                <p class="speaker__role">Cocina de cuchara · Madrid</p>
+                <p class="speaker__bio">
+                  Reivindica los guisos lentos y el producto de temporada.
+                  Taller: “Caldo base y fondos”.
+                </p>
+              </div>
+            </li>
+
+            <!-- Speaker 2 -->
+            <li class="speaker" data-initials="JL">
+              <img class="speaker__avatar" aria-hidden="true" src="../assets/images/jordi-lopez.png"></img>
+              <div class="speaker__body">
+                <h2 class="speaker__name">Jordi López</h2>
+                <p class="speaker__role">Horno de leña · Girona</p>
+                <p class="speaker__bio">
+                  Panes de masa madre y cocción tradicional. Demostración: “Coca
+                  de recapte”.
+                </p>
+              </div>
+            </li>
+
+            <!-- Speaker 3 -->
+            <li class="speaker" data-initials="MS">
+              <img class="speaker__avatar" aria-hidden="true" src="../assets/images/maria-santos.png"></img>
+              <div class="speaker__body">
+                <h2 class="speaker__name">María Santos</h2>
+                <p class="speaker__role">Conservas y encurtidos · Cádiz</p>
+                <p class="speaker__bio">
+                  Técnicas caseras seguras para conservar. Charla: “Vinagres,
+                  salmueras y aceite”.
+                </p>
+              </div>
+            </li>
+
+            <!-- Speaker 4 -->
+            <li class="speaker" data-initials="PT">
+              <img class="speaker__avatar" aria-hidden="true" src="../assets/images/pedro-torres.png"></img>
+              <div class="speaker__body">
+                <h2 class="speaker__name">Pedro Torres</h2>
+                <p class="speaker__role">Caza y estacionales · Soria</p>
+                <p class="speaker__bio">
+                  Respeto por el producto y técnicas de antaño. Sesión:
+                  “Estofados de otoño”.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <include src="views/footer.html"></include>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+@use "variables";
+
+/* ===== Base styles (apply on all pages) ===== */
+@layer base {
+  /* Reset & basics */
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .container {
+    width: min(100% - 32px, var(--container));
+    margin-inline: auto;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 19px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* ========= HEADER + NAV (mobile dropdown + desktop inline) ========= */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .site-header .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+  }
+
+  .brand {
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    margin-right: auto;
+  }
+
+  .nav-toggle {
+    background: var(--brand);
+    color: #fff;
+    border: 0;
+    padding: 8px 11px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgb(0 0 0 / 10%);
+    flex-direction: column;
+    gap: 4px;
+    min-width: 192px;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav .nav-link {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .site-nav .nav-link:hover {
+    background: #f3f0ee;
+  }
+
+  @media (width >= 768px) {
+    .nav-toggle {
+      display: none;
+    }
+
+    .site-nav {
+      display: flex !important;
+      position: static;
+      background: transparent;
+      box-shadow: none;
+      border: 0;
+      padding: 0;
+      flex-direction: row;
+      gap: 12px;
+      min-width: 0;
+    }
+  }
+
+  /* ========= FOOTER ========= */
+  .site-footer {
+    background: var(--brand);
+    color: #fff;
+  }
+
+  .site-footer .container {
+    padding: 16px;
+    text-align: center;
+  }
+}
