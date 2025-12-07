@@ -5,6 +5,7 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/maps";
