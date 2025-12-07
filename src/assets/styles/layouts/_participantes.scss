@@ -102,16 +102,19 @@
       .speakers__grid {
         gap: 24px 32px;
       }
+
       ul {
-        padding-inline-start: 0px;
+        padding-inline-start: 0;
       }
     }
+
     @media (width <= 480px) {
       .speaker {
         flex: 1 1 100%;
         max-width: 100%;
       }
     }
+
     @media (width<=900px) {
       ul {
         margin-block-start: unset;

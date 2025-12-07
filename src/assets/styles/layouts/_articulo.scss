@@ -19,21 +19,23 @@
         font-size: 0.95rem;
       }
     }
+
     .bs-scope {
       .badge {
         color: #6c757d;
-        background-color: #eeeeee;
+        background-color: #eee;
         border-radius: 10px;
       }
+
       .list-group {
         padding-left: 3.5rem !important;
         max-width: 720px;
         margin: 1.5rem auto;
         list-style: disc;
-        padding-left: 2rem;
         color: var(--brand-ink);
       }
     }
+
     .article__hero {
       margin: 0 auto 1.5rem;
       max-width: 720px;

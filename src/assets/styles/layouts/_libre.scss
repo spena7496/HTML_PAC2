@@ -35,8 +35,7 @@
       text-align: center;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       container-type: inline-size;
-      margin-inline-start: 10px;
-      margin-inline-end: 10px;
+      margin-inline: 10px;
 
       &:hover {
         transform: translateY(-6px);
