@@ -9,7 +9,18 @@
   --success: #1f8d49;
   --radius: 14px;
   --container: 1100px;
+  /* Alert colors */
+  --bs-warning-border-subtle: #fff3cd;
+  --bs-warning-bg-subtle: #ffeeba;
+  --bs-warning-text-emphasis: #856404;
+
+  /* List group background */
+  --bs-list-group-bg: #ffffff;
+  --bs-list-group-border-color: #dddddd;
+  --bs-list-group-color: #5d2a00;
 }
+$primary: #b44a00;
+$secondary: #1f8d49;
 
 $font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
   "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",

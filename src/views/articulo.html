@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Participantes — Jornadas Tradicionales</title>
+    <title>Articulo — Jornadas Tradicionales</title>
     <base href="/" />
     <link rel="stylesheet" href="../assets/styles/main.scss" />
     <script type="module" src="../assets/scripts/main.js"></script>
@@ -14,14 +14,17 @@
       <article class="container">
         <header class="article__header">
           <h1>Tradición y futuro en la cocina local</h1>
-          <p class="article__meta">
+          <p class="bs-scope article__meta">
             Por <strong>Equipo Jornadas</strong> · 20 noviembre 2025
           </p>
         </header>
 
-        <figure class="article__hero">
+        <figure class="bs-scope article__hero">
           <img src="../assets/images/plato.webp" alt="Plato tradicional" />
-          <figcaption>Sabores de siempre, técnicas renovadas.</figcaption>
+          <figcaption>
+            Sabores de siempre, técnicas renovadas.
+            <span class="badge bg-secondary ms-2">Edición 2025</span>
+          </figcaption>
         </figure>
 
         <p>
@@ -48,12 +51,13 @@
           experiencia completa. El público puede aprender, probar y llevarse
           nuevas ideas para aplicar en su día a día.
         </p>
-
-        <ul class="highlights">
-          <li>Charlas con expertos en producto local</li>
-          <li>Talleres de técnicas tradicionales</li>
-          <li>Degustaciones abiertas al público</li>
-        </ul>
+        <div class="bs-scope">
+          <ul class="list-group mt-3">
+            <li>Charlas con expertos en producto local</li>
+            <li>Talleres de técnicas tradicionales</li>
+            <li>Degustaciones abiertas al público</li>
+          </ul>
+        </div>
       </article>
     </main>
     <include src="views/footer.html"></include>

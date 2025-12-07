@@ -1,9 +1,8 @@
-@layer base {
+@layer layout {
   body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--ink);
-    background: var(--bg);
     line-height: 1.55;
   }
 
@@ -138,6 +137,13 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 20px 32px;
+    }
+  }
+
+  @container (min-width: 480px) {
+    .feature__grid {
+      grid-template-columns: 1.3fr 1fr;
+      align-items: center;
     }
   }
 }

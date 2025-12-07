@@ -1,8 +1,6 @@
 @use "variables";
 
-/* ===== Base styles (apply on all pages) ===== */
 @layer base {
-  /* Reset & basics */
   * {
     box-sizing: border-box;
   }
@@ -12,11 +10,13 @@
     height: 100%;
     margin: 0;
   }
+  main {
+    min-height: 84svh;
+  }
 
   body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--ink);
-    background: var(--bg);
     line-height: 1.55;
   }
 

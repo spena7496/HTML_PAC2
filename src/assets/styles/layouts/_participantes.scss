@@ -1,125 +1,123 @@
-.speakers {
-  background: #fff;
-  padding: 32px 16px 48px;
+@layer layout {
+  .speakers {
+    background: #fff;
+    padding: 32px 16px 48px;
 
-  .speakers__header {
-    text-align: center;
-    margin-bottom: 32px;
+    .speakers__header {
+      text-align: center;
+      margin-bottom: 32px;
 
-    h1 {
-      font-size: clamp(30px, 4.5vw, 40px);
-      color: var(--brand-ink, #5d2a00);
-      margin-bottom: 8px;
+      h1 {
+        font-size: clamp(30px, 4.5vw, 40px);
+        color: var(--brand-ink, #5d2a00);
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #555;
+        font-size: 16px;
+      }
     }
 
-    p {
-      color: #555;
-      font-size: 16px;
-    }
-  }
-
-  .speakers__grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    align-items: stretch;
-  }
-
-  /* ===== CARD ===== */
-  .speaker {
-    background: var(--bg, #fff7f1);
-    border: 1px solid #eee;
-    border-radius: var(--radius, 12px);
-    padding: 20px;
-    flex: 0 0 320px;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    container-type: inline-size;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgb(0 0 0 / 10%);
+    .speakers__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      align-items: stretch;
     }
 
-    /* Avatar (with initials) */
-    &__avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--brand, #b44a00), #e78a3b);
-      color: #fff;
-      font-weight: 800;
-      font-size: 24px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 8px;
-    }
-
-    &__name {
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--brand-ink, #5d2a00);
-    }
-
-    &__role {
-      color: #666;
-      font-size: 16px;
-    }
-
-    &__bio {
-      color: #333;
-      font-size: 16px;
-      margin-top: 4px;
-    }
-  }
-
-  /* ===== CONTAINER QUERY ===== */
-  @container (min-width: 420px) {
     .speaker {
-      flex-direction: row;
-      text-align: left;
+      background: var(--bg, #fff7f1);
+      border: 1px solid #eee;
+      border-radius: var(--radius, 12px);
+      padding: 20px;
+      flex: 0 0 320px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
+      text-align: center;
+      gap: 12px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      container-type: inline-size;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgb(0 0 0 / 10%);
+      }
 
       &__avatar {
-        width: 110px;
-        height: 110px;
-        margin: 0;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand, #b44a00), #e78a3b);
+        color: #fff;
+        font-weight: 800;
+        font-size: 24px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 8px;
       }
 
-      &__body {
-        flex: 1;
+      &__name {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--brand-ink, #5d2a00);
+      }
+
+      &__role {
+        color: #666;
+        font-size: 16px;
+      }
+
+      &__bio {
+        color: #333;
+        font-size: 16px;
+        margin-top: 4px;
       }
     }
-  }
 
-  /* ===== DESKTOP ===== */
-  @media (width >= 900px) {
-    .speakers__grid {
-      gap: 24px 32px;
+    @container (min-width: 420px) {
+      .speaker {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 20px;
+
+        &__avatar {
+          width: 110px;
+          height: 110px;
+          margin: 0;
+        }
+
+        &__body {
+          flex: 1;
+        }
+      }
     }
-    ul {
-      padding-inline-end: 40px;
+
+    @media (width >= 900px) {
+      .speakers__grid {
+        gap: 24px 32px;
+      }
+      ul {
+        padding-inline-start: 0px;
+      }
     }
-  }
-  @media (width <= 480px) {
-    .speaker {
-      flex: 1 1 100%;
-      max-width: 100%;
+    @media (width <= 480px) {
+      .speaker {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
-  }
-  @media (width<=900px) {
-    ul {
-      margin-block-start: unset;
-      margin-block-end: unset;
-      padding-inline-start: unset;
+    @media (width<=900px) {
+      ul {
+        margin-block-start: unset;
+        margin-block-end: unset;
+        padding-inline-start: unset;
+      }
     }
   }
 }

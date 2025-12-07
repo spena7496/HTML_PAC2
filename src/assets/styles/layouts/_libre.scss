@@ -1,69 +1,66 @@
-/* ============================
-   Página Extra (Libre)
-   ============================ */
+@layer layout {
+  .extra {
+    min-height: 84svh;
+    color: var(--ink, #222);
+    padding-block: 32px 48px;
 
-.extra {
-  min-height: 100svh;
-  background: oklch(97% 0.02 70deg);
-  color: var(--ink, #222);
-  padding-block: 32px 48px;
+    .extra__header {
+      text-align: center;
+      margin-bottom: 32px;
 
-  .extra__header {
-    text-align: center;
-    margin-bottom: 32px;
+      h1 {
+        font-size: clamp(28.8px, 5vw, 40px);
+        color: oklch(45% 0.1 50deg);
+      }
 
-    h1 {
-      font-size: clamp(28.8px, 5vw, 40px);
-      color: oklch(45% 0.1 50deg);
+      p {
+        max-width: 600px;
+        margin: 8px auto 0;
+        color: color-mix(in oklch, var(--brand) 40%, black);
+      }
     }
 
-    p {
-      max-width: 600px;
-      margin: 8px auto 0;
-      color: color-mix(in oklch, var(--brand) 40%, black);
-    }
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 24px;
-    padding-inline: 16px;
-  }
-
-  .gallery__item {
-    background: color-mix(in oklch, var(--brand) 20%, white);
-    border-radius: var(--radius, 14px);
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgb(0 0 0 / 10%);
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    container-type: inline-size;
-    margin-inline-start: 10px;
-    margin-inline-end: 10px;
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgb(0 0 0 / 15%);
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      padding-inline: 16px;
     }
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .gallery__item {
+      background: color-mix(in oklch, var(--brand) 20%, white);
+      border-radius: var(--radius, 14px);
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgb(0 0 0 / 10%);
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      container-type: inline-size;
+      margin-inline-start: 10px;
+      margin-inline-end: 10px;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgb(0 0 0 / 15%);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      figcaption {
+        padding: 12px;
+        font-weight: 600;
+        background: oklch(92% 0.04 80deg);
+        color: var(--brand-ink, #5d2a00);
+      }
     }
 
-    figcaption {
-      padding: 12px;
-      font-weight: 600;
-      background: oklch(92% 0.04 80deg);
-      color: var(--brand-ink, #5d2a00);
-    }
-  }
-
-  @container (min-width: 320px) {
-    .gallery__item figcaption {
-      font-size: 17.6px;
+    @container (min-width: 320px) {
+      .gallery__item figcaption {
+        font-size: 17.6px;
+      }
     }
   }
 }
